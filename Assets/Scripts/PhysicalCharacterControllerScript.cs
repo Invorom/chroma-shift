@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PhysicalCharacterControllerScript : MonoBehaviour
 {
     public float jumpForce = 10.0f; // Force to apply when jumping
     public float walkForce = 10.0f; // Force to apply when walking
     public float rotationSpeed = 360f; // Speed of rotation in degrees per second
+    public float airFriction = 0.05f; // Friction to apply when jumping
+    public float airControl = 0.08f; // Air control to apply when jumping
     public float mouseXSensitivity = 1f; // Sensitivity of mouse movement in degrees per pixel
     public float mouseYSensitivity = 1f; // Sensitivity of mouse movement in degrees per pixel
     public float maximumHorizontalVelocity = 10f; // Maximum horizontal velocity in meters per second
@@ -107,14 +110,14 @@ public class PhysicalCharacterControllerScript : MonoBehaviour
         {
             // Apply a friction to the character when in the air
             var velocity = characterRootRigidbody.velocity;
-            velocity.x -= velocity.x * 0.02f;
-            velocity.z -= velocity.z * 0.02f;
+            velocity.x -= velocity.x * airFriction;
+            velocity.z -= velocity.z * airFriction;
             characterRootRigidbody.velocity = velocity;
             
             // Add a air control lower than the ground control
             var targetForce = characterRootTransform.forward * _forwardMovementIntent;
             targetForce += characterRootTransform.right * _lateralMovementIntent;
-            targetForce = targetForce.normalized * (walkForce * Time.deltaTime * 0.1f);
+            targetForce = targetForce.normalized * (walkForce * Time.deltaTime * airControl);
             characterRootRigidbody.AddForce(targetForce,
                 ForceMode.Force);
         }

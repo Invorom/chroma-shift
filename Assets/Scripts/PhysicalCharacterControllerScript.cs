@@ -108,6 +108,8 @@ public class PhysicalCharacterControllerScript : MonoBehaviour
         }
         else
         {
+            _wantToJump = false;
+
             // Apply a friction to the character when in the air
             var velocity = characterRootRigidbody.velocity;
             velocity.x -= velocity.x * airFriction;

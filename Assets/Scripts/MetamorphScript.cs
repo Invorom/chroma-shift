@@ -6,30 +6,26 @@ public class MetamorphScript : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        var player = GameObject.FindWithTag("Player"); // Find the player
+        var playerTransform = player.transform; // Get the player's transform
+        var playerScale = playerTransform.localScale; // Get the player's scale
+        var playerBody = GameObject.FindWithTag("PlayerBody"); // Find the player's body
+        var playerRenderer = playerBody.GetComponent<Renderer>(); // Get the player's body's renderer
+
+        if (playerRenderer.material.color == Color.magenta)
         {
-            if (transform.localScale.x != 0.5f)
-            {
-                // Modify the player size
-                var player = GameObject.FindWithTag("Player");
-                var playerTransform = player.transform;
-                var playerScale = playerTransform.localScale;
-                playerScale.x = 0.5f;
-                playerScale.y = 0.5f;
-                playerScale.z = 0.5f;
-                playerTransform.localScale = playerScale;
-            }
-            else
-            {
-                // Modify the player size
-                var player = GameObject.FindWithTag("Player");
-                var playerTransform = player.transform;
-                var playerScale = playerTransform.localScale;
-                playerScale.x = 1;
-                playerScale.y = 1;
-                playerScale.z = 1;
-                playerTransform.localScale = playerScale;
-            }
+            // Shrink the player
+            playerScale.x = 0.5f;
+            playerScale.y = 0.5f;
+            playerScale.z = 0.5f;
         }
+        else
+        {
+            // Reset the player size
+            playerScale.x = 1;
+            playerScale.y = 1;
+            playerScale.z = 1;
+        }
+        playerTransform.localScale = playerScale; // Set the player's scale
     }
 }

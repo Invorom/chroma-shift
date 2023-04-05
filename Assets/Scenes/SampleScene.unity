@@ -237,6 +237,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4540b728a37e26f44925759e4c8cba55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &636422425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636422420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce491aaa095f830419557639457cf711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &643087973
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,7 +835,11 @@ PrefabInstance:
     - target: {fileID: 5674262120115728034, guid: 74289c68df12afa4a8f18bf6588ce486, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 2100000, guid: 1c914402dcf30e945b96f2bfa5cc6a7b, type: 2}
+    - target: {fileID: 5674262120115728039, guid: 74289c68df12afa4a8f18bf6588ce486, type: 3}
+      propertyPath: m_TagString
+      value: PlayerBody
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74289c68df12afa4a8f18bf6588ce486, type: 3}
 --- !u!1 &1882913288

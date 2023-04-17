@@ -82,7 +82,7 @@ public class PhysicalCharacterControllerScript : MonoBehaviour
     {
         // Check if the character is grounded
         if (Physics.SphereCast(characterRootTransform.position + 0.4951f * Vector3.up, 0.495f,
-                Vector3.down, out var hit, 0.1f))
+                Vector3.down, out var hit, 0.1f) )
         {
             // Add a force to the character
             var velocity = characterRootRigidbody.velocity;

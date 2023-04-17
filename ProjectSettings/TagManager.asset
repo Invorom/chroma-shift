@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerBody
   - Trap
+  - Filter
   layers:
   - Default
   - TransparentFX

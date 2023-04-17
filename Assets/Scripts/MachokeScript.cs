@@ -9,10 +9,17 @@ public class MachokeScript : MonoBehaviour
         var player = GameObject.FindWithTag("Player");
         var playerBody = GameObject.FindWithTag("PlayerBody");
         var playerRenderer = playerBody.GetComponent<Renderer>();
+	    var movingCubes = GameObject.FindGameObjectsWithTag("MovingCube");
         
         if (playerRenderer.material.color != Color.red)
         {
             player.gameObject.GetComponent<PhysicalCharacterControllerScript>().walkForce = 8000f;
+
+			// Change the mass of the moving cubes
+			foreach (var movingCube in movingCubes)
+			{
+				movingCube.GetComponent<Rigidbody>().mass = 50f;
+			}
         }
     } 
     
@@ -20,12 +27,18 @@ public class MachokeScript : MonoBehaviour
     {
         var playerBody = GameObject.FindWithTag("PlayerBody");
         var playerRenderer = playerBody.GetComponent<Renderer>();
+	    var movingCubes = GameObject.FindGameObjectsWithTag("MovingCube");
         
         if (other.gameObject.CompareTag("Player"))
         {
             if (playerRenderer.material.color == Color.red)
             {
                 other.gameObject.GetComponent<PhysicalCharacterControllerScript>().walkForce = 15000f;
+				// Change the mass of the moving cubes
+				foreach (var movingCube in movingCubes)
+				{
+					movingCube.GetComponent<Rigidbody>().mass = 1f;
+				}
             }
         }
     }
@@ -34,21 +47,34 @@ public class MachokeScript : MonoBehaviour
     {
         var playerBody = GameObject.FindWithTag("PlayerBody");
         var playerRenderer = playerBody.GetComponent<Renderer>();
+	    var movingCubes = GameObject.FindGameObjectsWithTag("MovingCube");
         
         if (other.gameObject.CompareTag("Player"))
         {
             if (playerRenderer.material.color == Color.red)
             {
                 other.gameObject.GetComponent<PhysicalCharacterControllerScript>().walkForce = 15000f;
+				// Change the mass of the moving cubes
+				foreach (var movingCube in movingCubes)
+				{
+					movingCube.GetComponent<Rigidbody>().mass = 1f;
+				}
             }
         }
     }
     
     private void OnCollisionExit(Collision other)
     {
+	    var movingCubes = GameObject.FindGameObjectsWithTag("MovingCube");
+
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<PhysicalCharacterControllerScript>().walkForce = 8000f;
+			// Change the mass of the moving cubes
+			foreach (var movingCube in movingCubes)
+			{
+				movingCube.GetComponent<Rigidbody>().mass = 50f;
+			}
         }
     }
 }

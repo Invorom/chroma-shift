@@ -7,7 +7,7 @@ TagManager:
   - PlayerBody
   - Trap
   - Filter
-
+  - MovingCube
   layers:
   - Default
   - TransparentFX

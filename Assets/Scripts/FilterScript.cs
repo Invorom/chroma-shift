@@ -27,7 +27,7 @@ public class FilterScript : MonoBehaviour
             // Set the filter material to red transparent
             transparentMaterial.color = new Color(1, 0, 0, 0.0001f);
             // Set the filter material emission color to red
-            transparentMaterial.SetColor("_EmissionColor", new Color(1, 0, 0));
+            transparentMaterial.SetColor("_EmissionColor", new Color(0.35f, 0, 0));
         }
         
         if (playerRenderer.material.color == Color.blue)
@@ -37,7 +37,7 @@ public class FilterScript : MonoBehaviour
             // Set the filter material to blue transparent
             transparentMaterial.color = new Color(0, 0, 1, 0.0001f);
             // Set the filter material emission color to blue
-            transparentMaterial.SetColor("_EmissionColor", new Color(0, 0, 1));
+            transparentMaterial.SetColor("_EmissionColor", new Color(0, 0, 0.35f));
         }
         
         if (playerRenderer.material.color == Color.green)
@@ -47,7 +47,7 @@ public class FilterScript : MonoBehaviour
             // Set the filter material to green transparent
             transparentMaterial.color = new Color(0, 0.6f, 0, 0.0001f);
             // Set the filter material emission color to green
-            transparentMaterial.SetColor("_EmissionColor", new Color(0, 0.5f, 0));
+            transparentMaterial.SetColor("_EmissionColor", new Color(0, 0.2f, 0));
         }
         
         if (playerRenderer.material.color == Color.magenta)
@@ -57,7 +57,7 @@ public class FilterScript : MonoBehaviour
             // Set the filter material to magenta transparent
             transparentMaterial.color = new Color(1, 0, 1, 0.0001f);
             // Set the filter material emission color to magenta
-            transparentMaterial.SetColor("_EmissionColor", new Color(0.7f, 0, 0.7f));
+            transparentMaterial.SetColor("_EmissionColor", new Color(0.35f, 0, 0.35f));
         }
     }
 }

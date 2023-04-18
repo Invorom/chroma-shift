@@ -21,10 +21,16 @@ public class MetamorphScript : MonoBehaviour
         }
         else
         {
-            // Reset the player size
-            playerScale.x = 1;
-            playerScale.y = 1;
-            playerScale.z = 1;
+			// Get the player's root transform
+			var characterRootTransform = player.GetComponent<PhysicalCharacterControllerScript>().characterRootTransform;
+			if (!(Physics.SphereCast(characterRootTransform.position + 0.4951f * Vector3.up, 0.495f,
+                Vector3.up, out var hit, 0.51f)) )
+			{
+			    // Grow the player
+				playerScale.x = 1f;
+				playerScale.y = 1f;
+				playerScale.z = 1f;
+			}
         }
         playerTransform.localScale = playerScale; // Set the player's scale
     }

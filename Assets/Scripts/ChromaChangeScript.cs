@@ -8,6 +8,8 @@ public class ChromaChangeScript : MonoBehaviour
     {
         var playerBody = GameObject.FindWithTag("PlayerBody");
         var playerRenderer = playerBody.GetComponent<Renderer>();
+        var characterRootTransform = playerBody.transform.parent;
+
         
         // Change the player color
         if (Input.GetKeyDown(KeyCode.A))
@@ -36,7 +38,8 @@ public class ChromaChangeScript : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.R))
         {
-            if (playerRenderer.material.color == Color.magenta)
+            if (playerRenderer.material.color == Color.magenta && 
+                !(Physics.SphereCast(characterRootTransform.position + 0.4951f * Vector3.up, 0.495f, Vector3.up, out var hit, 0.51f)) )
             {
                 playerRenderer.material.color = Color.white;
             }

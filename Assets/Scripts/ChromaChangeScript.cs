@@ -8,54 +8,64 @@ public class ChromaChangeScript : MonoBehaviour
     {
         var playerBody = GameObject.FindWithTag("PlayerBody");
         var playerRenderer = playerBody.GetComponent<Renderer>();
+        var characterRootTransform = playerBody.transform.parent;
+        
         
         // Change the player color
-        if (Input.GetKeyDown(KeyCode.A))
+        if (playerRenderer.material.color != Color.magenta ||
+            !(Physics.SphereCast(characterRootTransform.position + 0.4951f * Vector3.up, 0.495f, Vector3.up,
+                out var hit, 0.51f)))
         {
-            if (playerRenderer.material.color == Color.red)
+            if (Input.GetKeyDown(KeyCode.A))
             {
-                playerRenderer.material.color = Color.white;
+                if (playerRenderer.material.color == Color.red)
+                {
+                    playerRenderer.material.color = Color.white;
+                }
+                else
+                {
+                    // Red
+                    playerRenderer.material.color = Color.red;
+                }
             }
-            else
+
+            if (Input.GetKeyUp(KeyCode.E))
             {
-                // Red
-                playerRenderer.material.color = Color.red;
+                if (playerRenderer.material.color == Color.blue)
+                {
+                    playerRenderer.material.color = Color.white;
+                }
+                else
+                {
+                    // Blue
+                    playerRenderer.material.color = Color.blue;
+                }
             }
-        }
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            if (playerRenderer.material.color == Color.blue)
+
+            if (Input.GetKeyUp(KeyCode.R))
             {
-                playerRenderer.material.color = Color.white;
+                if (playerRenderer.material.color == Color.magenta)
+                {
+                    playerRenderer.material.color = Color.white;
+                }
+                else
+                {
+                    // Purple
+                    playerRenderer.material.color = Color.magenta;
+                }
             }
-            else
+
+            if (Input.GetKeyUp(KeyCode.F))
             {
-                // Blue
-                playerRenderer.material.color = Color.blue;  
-            }
-        }
-        if (Input.GetKeyUp(KeyCode.R))
-        {
-            if (playerRenderer.material.color == Color.magenta)
-            {
-                playerRenderer.material.color = Color.white;
-            }
-            else
-            {
-                // Purple
-                playerRenderer.material.color = Color.magenta;
-            }
-        }
-        if (Input.GetKeyUp(KeyCode.F))
-        {
-            if (playerRenderer.material.color == Color.green)
-            {
-                playerRenderer.material.color = Color.white;
-            }
-            else
-            {
-                // Green
-                playerRenderer.material.color = Color.green;
+                if (playerRenderer.material.color == Color.green)
+                {
+                    playerRenderer.material.color = Color.white;
+                }
+                else
+                {
+                    // Green
+                    playerRenderer.material.color = Color.green;
+                }
             }
         }
     }

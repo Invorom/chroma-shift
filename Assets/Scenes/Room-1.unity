@@ -2278,7 +2278,7 @@ GameObject:
   - component: {fileID: 276704649}
   - component: {fileID: 276704648}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: InputFieldCanvas
   m_TagString: InputField
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6819,7 +6819,7 @@ GameObject:
   - component: {fileID: 977775798}
   - component: {fileID: 977775797}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CrossHair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7563,7 +7563,7 @@ GameObject:
   - component: {fileID: 1111859108}
   m_Layer: 5
   m_Name: InputField (TMP)
-  m_TagString: Untagged
+  m_TagString: InputFieldText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7650,7 +7650,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1584352986}
+        m_TargetAssemblyTypeName: CheckDigicodeScript, Assembly-CSharp
+        m_MethodName: GetInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -9459,7 +9471,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -10978,9 +10990,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1584352984}
   - component: {fileID: 1584352983}
+  - component: {fileID: 1584352985}
+  - component: {fileID: 1584352986}
   m_Layer: 0
   m_Name: Scripts
-  m_TagString: Untagged
+  m_TagString: Scripts
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11012,6 +11026,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1584352985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584352982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 618ffff5535c2c64e8ee6e410d3c4207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 1111859108}
+--- !u!114 &1584352986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584352982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e0bf196fce798747b6a7abd9e31b922, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActivated: 0
+  input: {fileID: 1111859108}
 --- !u!1001 &1585473926
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24071,25 +24112,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 096d624870bf1df4ebf195ec3365322b, type: 3}
---- !u!1 &7445606978554710493 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6346761687006070326, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
-  m_PrefabInstance: {fileID: 4557684851333009387}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7445606978554710498 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 161994462207347416, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
   m_PrefabInstance: {fileID: 4557684851333009387}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7445606978554710499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7445606978554710493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 618ffff5535c2c64e8ee6e410d3c4207, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

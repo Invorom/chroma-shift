@@ -2,9 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using TMPro;
+
 
 public class DetectClickScript : MonoBehaviour
 {
+    [SerializeField]
+    public TMP_InputField inputField;
+    
     // Make raycast when the player press the left mouse button
     void Update()
     {
@@ -13,7 +19,7 @@ public class DetectClickScript : MonoBehaviour
         var playerBody = GameObject.FindWithTag("PlayerBody");
         var eyes = GameObject.FindWithTag("Eyes");
         var eyesCamera = eyes.GetComponent<Camera>();
-        var inputField = GameObject.FindWithTag("InputField");
+        var canvasInputField = GameObject.FindWithTag("InputField");
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
@@ -25,18 +31,25 @@ public class DetectClickScript : MonoBehaviour
             {
                 if (hit.collider.gameObject.tag == "Button")
                 {
-                    // Get the canvas from the input field
-                    var canvas = inputField.GetComponent<Canvas>();
-                    
-                    // Enable the canvas
-                    canvas.enabled = true;
-                    
                     // Block the player's movement
                     player.gameObject.GetComponent<PhysicalCharacterControllerScript>().walkForce = 0f;
                     
                     // Set the mouse sensitivity to 0
                     player.gameObject.GetComponent<PhysicalCharacterControllerScript>().mouseXSensitivity = 0f;
                     player.gameObject.GetComponent<PhysicalCharacterControllerScript>().mouseYSensitivity = 0f;
+                    
+                    // Get the canvas from the input field
+                    var canvas = canvasInputField.GetComponent<Canvas>();
+                    
+                    // Enable the canvas
+                    canvas.enabled = true;
+
+                    // Select the input field
+                    inputField.Select();
+                    
+                    // IsActivated is true for CheckDigicodeScript
+                    var checkDigicodeScript = GameObject.FindWithTag("Scripts").GetComponent<CheckDigicodeScript>();
+                    checkDigicodeScript.isActivated = true;
                 }
             }
         }
@@ -45,7 +58,7 @@ public class DetectClickScript : MonoBehaviour
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             // Get the canvas from the input field
-            var canvas = inputField.GetComponent<Canvas>();
+            var canvas = canvasInputField.GetComponent<Canvas>();
             
             // Disable the canvas
             canvas.enabled = false;

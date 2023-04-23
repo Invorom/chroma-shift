@@ -11,6 +11,8 @@ TagManager:
   - Button
   - Eyes
   - InputField
+  - InputFieldText
+  - Scripts
   layers:
   - Default
   - TransparentFX

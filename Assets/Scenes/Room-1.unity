@@ -3292,6 +3292,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: PlayerBody
       objectReference: {fileID: 0}
+    - target: {fileID: 5674262121194043049, guid: 74289c68df12afa4a8f18bf6588ce486, type: 3}
+      propertyPath: m_TagString
+      value: Eyes
+      objectReference: {fileID: 0}
     - target: {fileID: 5674262121194043061, guid: 74289c68df12afa4a8f18bf6588ce486, type: 3}
       propertyPath: m_ClearFlags
       value: 1
@@ -13475,6 +13479,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 6346761687006070326, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
 --- !u!199 &5244976801667846821
@@ -23197,3 +23205,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 096d624870bf1df4ebf195ec3365322b, type: 3}
+--- !u!1 &7445606978554710493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6346761687006070326, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
+  m_PrefabInstance: {fileID: 4557684851333009387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7445606978554710494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7445606978554710493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 618ffff5535c2c64e8ee6e410d3c4207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

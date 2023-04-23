@@ -10,6 +10,7 @@ TagManager:
   - MovingCube
   - Button
   - Eyes
+  - InputField
   layers:
   - Default
   - TransparentFX

@@ -10,8 +10,10 @@ public class MachokeScript : MonoBehaviour
         var playerBody = GameObject.FindWithTag("PlayerBody");
         var playerRenderer = playerBody.GetComponent<Renderer>();
 	    var movingCubes = GameObject.FindGameObjectsWithTag("MovingCube");
+		var InputField = GameObject.FindWithTag("InputField");
+		var canvas = InputField.GetComponent<Canvas>();
         
-        if (playerRenderer.material.color != Color.red)
+        if (playerRenderer.material.color != Color.red && canvas.enabled == false)
         {
             player.gameObject.GetComponent<PhysicalCharacterControllerScript>().walkForce = 8000f;
 

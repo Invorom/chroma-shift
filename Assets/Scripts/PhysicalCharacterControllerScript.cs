@@ -3,13 +3,13 @@ using UnityEngine.Serialization;
 
 public class PhysicalCharacterControllerScript : MonoBehaviour
 {
-    public float jumpForce = 10.0f; // Force to apply when jumping
-    public float walkForce = 10.0f; // Force to apply when walking
+    public float jumpForce = 8.0f; // Force to apply when jumping
+    public float walkForce = 8000.0f; // Force to apply when walking
     public float rotationSpeed = 360f; // Speed of rotation in degrees per second
     public float airFriction = 0.05f; // Friction to apply when jumping
     public float airControl = 0.08f; // Air control to apply when jumping
-    public float mouseXSensitivity = 1f; // Sensitivity of mouse movement in degrees per pixel
-    public float mouseYSensitivity = 1f; // Sensitivity of mouse movement in degrees per pixel
+    public float mouseXSensitivity = 250f; // Sensitivity of mouse movement in degrees per pixel
+    public float mouseYSensitivity = 150f; // Sensitivity of mouse movement in degrees per pixel
     public float maximumHorizontalVelocity = 10f; // Maximum horizontal velocity in meters per second
     public Transform characterRootTransform; // The transform of the character's root
     public Transform characterEyesTransform; // The transform of the character's eyes

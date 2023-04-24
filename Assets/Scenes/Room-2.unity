@@ -511,6 +511,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 77
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &122592941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6346761687006070326, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
+  m_PrefabInstance: {fileID: 646315051}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &122592946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122592941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d1b74d134e465543a4a008efc2253d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDoor: {fileID: 670737516}
+  leftDoorXStart: 47.5
+  leftDoorYStart: 2.47
+  leftDoorZStart: 13.78
+  leftDoorXEnd: 47.5
+  leftDoorYEnd: 2.47
+  leftDoorZEnd: 15.28
+  rightDoor: {fileID: 639306131}
+  rightDoorXStart: 47.5
+  rightDoorYStart: 2.47
+  rightDoorZStart: 11.22
+  rightDoorXEnd: 47.5
+  rightDoorYEnd: 2.47
+  rightDoorZEnd: 9.72
+  isActivated: 0
 --- !u!1 &136166296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,6 +1156,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &213721312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6346761687006070326, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
+  m_PrefabInstance: {fileID: 352972518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &213721317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213721312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d1b74d134e465543a4a008efc2253d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDoor: {fileID: 456115727}
+  leftDoorXStart: -15
+  leftDoorYStart: 2.47
+  leftDoorZStart: -16.28
+  leftDoorXEnd: -15
+  leftDoorYEnd: 2.47
+  leftDoorZEnd: -17.78
+  rightDoor: {fileID: 1777491110}
+  rightDoorXStart: -15
+  rightDoorYStart: 2.47
+  rightDoorZStart: -13.72
+  rightDoorXEnd: -15
+  rightDoorYEnd: 2.47
+  rightDoorZEnd: -12.22
+  isActivated: 0
 --- !u!1 &220446807
 GameObject:
   m_ObjectHideFlags: 0
@@ -2436,6 +2500,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6346761687006070326, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
 --- !u!1 &353563523
@@ -2841,6 +2909,14 @@ PrefabInstance:
     - target: {fileID: 5674262120115728039, guid: 74289c68df12afa4a8f18bf6588ce486, type: 3}
       propertyPath: m_TagString
       value: PlayerBody
+      objectReference: {fileID: 0}
+    - target: {fileID: 5674262120771184369, guid: 74289c68df12afa4a8f18bf6588ce486, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5674262121194043049, guid: 74289c68df12afa4a8f18bf6588ce486, type: 3}
+      propertyPath: m_TagString
+      value: Eyes
       objectReference: {fileID: 0}
     - target: {fileID: 5674262121194043061, guid: 74289c68df12afa4a8f18bf6588ce486, type: 3}
       propertyPath: m_ClearFlags
@@ -3941,7 +4017,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639306131}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 47.5, y: 2.47, z: 11.219994}
+  m_LocalPosition: {x: 47.5, y: 2.47, z: 11.22}
   m_LocalScale: {x: 2.5, y: 6, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3981,7 +4057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 161994462207347416, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 29.05
+      value: 28.601
       objectReference: {fileID: 0}
     - target: {fileID: 161994462207347416, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4014,6 +4090,10 @@ PrefabInstance:
     - target: {fileID: 6346761687006070326, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
       propertyPath: m_Name
       value: Button (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346761687006070326, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
+      propertyPath: m_TagString
+      value: Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
@@ -4107,7 +4187,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670737516}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 47.5, y: 2.47, z: 13.779991}
+  m_LocalPosition: {x: 47.5, y: 2.47, z: 13.78}
   m_LocalScale: {x: 2.5, y: 6, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4381,6 +4461,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fbbd4a8db328f84cb0799c95c4eda11, type: 3}
+--- !u!1 &764224252 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6346761687006070326, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
+  m_PrefabInstance: {fileID: 1854475571}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &764224257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764224252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d1b74d134e465543a4a008efc2253d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDoor: {fileID: 1300501361}
+  leftDoorXStart: -15
+  leftDoorYStart: 2.47
+  leftDoorZStart: -36.28
+  leftDoorXEnd: -15
+  leftDoorYEnd: 2.47
+  leftDoorZEnd: -37.78
+  rightDoor: {fileID: 1499316549}
+  rightDoorXStart: -15
+  rightDoorYStart: 2.47
+  rightDoorZStart: -33.72
+  rightDoorXEnd: -15
+  rightDoorYEnd: 2.47
+  rightDoorZEnd: -32.22
+  isActivated: 0
 --- !u!1001 &771852594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5771,6 +5883,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 103
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1132298805 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6346761687006070326, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
+  m_PrefabInstance: {fileID: 2082556099}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1132298806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132298805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d1b74d134e465543a4a008efc2253d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDoor: {fileID: 1929869773}
+  leftDoorXStart: 8.75
+  leftDoorYStart: 2.47
+  leftDoorZStart: -3.25
+  leftDoorXEnd: 10.5
+  leftDoorYEnd: 2.47
+  leftDoorZEnd: -3.25
+  rightDoor: {fileID: 1788895665}
+  rightDoorXStart: 6.25
+  rightDoorYStart: 2.47
+  rightDoorZStart: -3.25
+  rightDoorXEnd: 4.75
+  rightDoorYEnd: 2.47
+  rightDoorZEnd: -3.25
+  isActivated: 0
 --- !u!1 &1132681643
 GameObject:
   m_ObjectHideFlags: 0
@@ -9070,6 +9214,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6346761687006070326, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
 --- !u!1 &1670988963
@@ -10429,8 +10577,44 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6346761687006070326, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
+--- !u!1 &1879910622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6346761687006070326, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
+  m_PrefabInstance: {fileID: 1668660505}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1879910627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879910622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d1b74d134e465543a4a008efc2253d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftDoor: {fileID: 1300501361}
+  leftDoorXStart: -15
+  leftDoorYStart: 2.47
+  leftDoorZStart: -33.72
+  leftDoorXEnd: -15
+  leftDoorYEnd: 2.47
+  leftDoorZEnd: -32.22
+  rightDoor: {fileID: 1499316549}
+  rightDoorXStart: -15
+  rightDoorYStart: 2.47
+  rightDoorZStart: -36.28
+  rightDoorXEnd: -15
+  rightDoorYEnd: 2.47
+  rightDoorZEnd: -37.78
+  isActivated: 0
 --- !u!1001 &1884624093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12376,7 +12560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 161994462207347416, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.95
+      value: -0.85
       objectReference: {fileID: 0}
     - target: {fileID: 161994462207347416, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12408,6 +12592,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6346761687006070326, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
       propertyPath: m_Name
+      value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6346761687006070326, guid: 5ba3bd5bd6221624d81de2745554d43d, type: 3}
+      propertyPath: m_TagString
       value: Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []

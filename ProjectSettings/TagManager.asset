@@ -8,6 +8,8 @@ TagManager:
   - Trap
   - Filter
   - MovingCube
+  - Eyes
+  - Button
   layers:
   - Default
   - TransparentFX

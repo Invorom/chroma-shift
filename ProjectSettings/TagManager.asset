@@ -13,6 +13,7 @@ TagManager:
   - InputField
   - InputFieldText
   - Scripts
+  - Humanoid
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class ClickOnButtonScript : MonoBehaviour
 {
     public Collider Button;
-    
+
     // Update is called once per frame
     void Update()
     {

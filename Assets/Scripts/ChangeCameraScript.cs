@@ -1,19 +1,30 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class DetectClickScript : MonoBehaviour
+public class ChangeCameraScript : MonoBehaviour
 {
-    // Make raycast when the player press the left mouse button
+    public RenderTexture RenderTexture;
+    public RenderTexture RedRenderTexture;
+    public RenderTexture BlueRenderTexture;
+    public RenderTexture GreenRenderTexture;
+    public RenderTexture YellowRenderTexture;
+    public RenderTexture BlackRenderTexture;
+    public Collider Button;
+    
     void Update()
     {
-        // Get the Eyes tag camera
         var player = GameObject.FindWithTag("Player");
         var playerBody = GameObject.FindWithTag("PlayerBody");
         var eyes = GameObject.FindWithTag("Eyes");
         var eyesCamera = eyes.GetComponent<Camera>();
+        var screen = GameObject.FindWithTag("Screen");
+        var screenRenderer = screen.GetComponent<Renderer>();
+
+        // Get my own texture
+        var whiteMaterial = Resources.Load("Test", typeof(Material)) as Material;
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
@@ -21,14 +32,36 @@ public class DetectClickScript : MonoBehaviour
             Ray ray = eyesCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
 
             // If the raycast hit Button tag object (Digicode)
-            if (Physics.Raycast(ray, out hit, 1.0f))
+            if (Physics.Raycast(ray, out hit, 2.0f))
             {
-                if (hit.collider.gameObject.tag == "Button")
+                if (hit.collider == Button)
                 {
-                    
+                    if (screenRenderer.material.mainTexture == RenderTexture)
+                    {
+                        screenRenderer.material.mainTexture = RedRenderTexture;
+                    }
+                    else if (screenRenderer.material.mainTexture == RedRenderTexture)
+                    {
+                        screenRenderer.material.mainTexture = BlueRenderTexture;
+                    }
+                    else if (screenRenderer.material.mainTexture == BlueRenderTexture)
+                    {
+                        screenRenderer.material.mainTexture = GreenRenderTexture;
+                    }
+                    else if (screenRenderer.material.mainTexture == GreenRenderTexture)
+                    {
+                        screenRenderer.material.mainTexture = YellowRenderTexture;
+                    }
+                    else if (screenRenderer.material.mainTexture == YellowRenderTexture)
+                    {
+                        screenRenderer.material.mainTexture = BlackRenderTexture;
+                    }
+                    else if (screenRenderer.material.mainTexture == BlackRenderTexture)
+                    {
+                        screenRenderer.material.mainTexture = RenderTexture;
+                    }
                 }
             }
         }
     }
 }
-*/

@@ -10,7 +10,8 @@ public class DetectClickScript : MonoBehaviour
 {
     [SerializeField]
     public TMP_InputField inputField;
-    
+    public Collider Digicode;
+
     // Make raycast when the player press the left mouse button
     void Update()
     {
@@ -27,9 +28,9 @@ public class DetectClickScript : MonoBehaviour
             Ray ray = eyesCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
             
             // If the raycast hit Button tag object (Digicode)
-            if (Physics.Raycast(ray, out hit, 1.0f))
+            if (Physics.Raycast(ray, out hit, 2.0f))
             {
-                if (hit.collider.gameObject.tag == "Button")
+                if (hit.collider == Digicode)
                 {
                     // Block the player's movement
                     player.gameObject.GetComponent<PhysicalCharacterControllerScript>().walkForce = 0f;

@@ -13,7 +13,7 @@ public class CheckDigicodeScript : MonoBehaviour
 	public void GetInput(string guess) {
 		if (isActivated == true) {
 			Debug.Log(guess);
-        	if (guess == "5628") {
+        	if (guess == "58624") {
             	Debug.Log("Correct!");
         	} else {
            		Debug.Log("Wrong!");

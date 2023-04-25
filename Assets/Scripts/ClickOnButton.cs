@@ -14,8 +14,7 @@ public class ClickOnButton : MonoBehaviour
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            // write in console
-            Debug.Log("Mouse click");
+            Debug.Log("Mouse Click");
             RaycastHit hit;
             Ray ray = eyesCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
             

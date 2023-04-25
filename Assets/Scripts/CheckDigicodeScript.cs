@@ -6,17 +6,18 @@ using TMPro;
 
 public class CheckDigicodeScript : MonoBehaviour
 {
+    public GameObject button;
     public bool isActivated = false;
 	[SerializeField]
 	private TMP_InputField input;
 
 	public void GetInput(string guess) {
 		if (isActivated == true) {
-			Debug.Log(guess);
         	if (guess == "58624") {
-            	Debug.Log("Correct!");
+				var openDoorScript = button.GetComponent<OpenDoorScript>();
+			    openDoorScript.isActivated = true;
+				input.text = "Well done!";
         	} else {
-           		Debug.Log("Wrong!");
 				input.text = "";
         	}
     	}

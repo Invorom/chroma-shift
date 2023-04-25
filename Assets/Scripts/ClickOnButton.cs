@@ -5,10 +5,11 @@ using UnityEngine.InputSystem;
 
 public class ClickOnButton : MonoBehaviour
 {
+    
+    public GameObject eyes;
     // Update is called once per frame
     void Update()
     {
-        var eyes = GameObject.FindWithTag("Eyes");
         var eyesCamera = eyes.GetComponent<Camera>();
         // get mouse click
 

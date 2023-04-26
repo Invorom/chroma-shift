@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class MetamorphScript : MonoBehaviour
 {
+	public GameObject player;
+	public GameObject playerBody;
     void Update()
     {
-        var player = GameObject.FindWithTag("Player"); // Find the player
         var playerTransform = player.transform; // Get the player's transform
         var playerScale = playerTransform.localScale; // Get the player's scale
-        var playerBody = GameObject.FindWithTag("PlayerBody"); // Find the player's body
         var playerRenderer = playerBody.GetComponent<Renderer>(); // Get the player's body's renderer
 
         if (playerRenderer.material.color == Color.magenta)

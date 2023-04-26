@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ChromaChangeScript : MonoBehaviour
 {
+    public GameObject playerBody;
     void Update()
     {
-        var playerBody = GameObject.FindWithTag("PlayerBody");
         var playerRenderer = playerBody.GetComponent<Renderer>();
         var characterRootTransform = playerBody.transform.parent;
         

@@ -14,7 +14,6 @@ public class ClickOnButtonForDoorScript : MonoBehaviour
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            Debug.Log("Mouse Click");
             RaycastHit hit;
             Ray ray = eyesCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
             

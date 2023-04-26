@@ -8,8 +8,13 @@ TagManager:
   - Trap
   - Filter
   - MovingCube
-  - Eyes
   - Button
+  - Eyes
+  - InputField
+  - InputFieldText
+  - Scripts
+  - Humanoid
+  - Screen
   layers:
   - Default
   - TransparentFX

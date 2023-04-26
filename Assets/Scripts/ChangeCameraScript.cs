@@ -23,9 +23,6 @@ public class ChangeCameraScript : MonoBehaviour
         var screen = GameObject.FindWithTag("Screen");
         var screenRenderer = screen.GetComponent<Renderer>();
 
-        // Get my own texture
-        var whiteMaterial = Resources.Load("Test", typeof(Material)) as Material;
-
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             RaycastHit hit;

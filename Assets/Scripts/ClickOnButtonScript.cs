@@ -5,33 +5,41 @@ using UnityEngine.InputSystem;
 
 public class ClickOnButtonScript : MonoBehaviour
 {
-    public Collider Button;
-
-    // Update is called once per frame
+    public GameObject eyes;
+    
     void Update()
     {
-        var eyes = GameObject.FindWithTag("Eyes");
         var eyesCamera = eyes.GetComponent<Camera>();
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
+            Debug.Log("Mouse Click");
             RaycastHit hit;
             Ray ray = eyesCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
             
-            if (Physics.Raycast(ray, out hit, 2.0f))
+            if (Physics.Raycast(ray, out hit, 3.0f))
             {
-                if (hit.collider == Button)
+                if (hit.collider.gameObject.tag == "Button")
                 {
-                    // switch value isAtivated on the script OpenDoor
-                    var openDoorScript = hit.collider.gameObject.GetComponent<OpenDoorScript>();
-                    
-                    if(openDoorScript.isActivated == false)
+                    var script = hit.collider.gameObject.GetComponent<MonoBehaviour>();
+
+                    Debug.Log(script.GetType().Name);
+                    if (script.GetType().Name == "OpenDoorScript")
                     {
-                        openDoorScript.isActivated = true;
+                        var openDoorScript = script as OpenDoorScript;
+                        if(openDoorScript.isActivated == false)
+                        {
+                            openDoorScript.isActivated = true;
+                        }
+                        else
+                        {
+                            openDoorScript.isActivated = false;
+                        }
                     }
-                    else
+                    else if (script.GetType().Name == "ChangeCameraScript")
                     {
-                        openDoorScript.isActivated = false;
+                        var changeCameraScript = script as ChangeCameraScript;
+                        changeCameraScript.OnClick();
                     }
                     
                 }

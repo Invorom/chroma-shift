@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ShowMenuOnEscapeScript : MonoBehaviour
 {
     public GameObject panel;
     public GameObject player;
-    public GameObject ScriptHolder;
+    public GameObject scriptHolder;
+    public GameObject crosshair;
     // Update is called once per frame
     void Update()
     {
@@ -16,6 +18,7 @@ public class ShowMenuOnEscapeScript : MonoBehaviour
             {
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
+                crosshair.SetActive(false);
                 // disable all scripts on player
                 var scripts = player.GetComponents<MonoBehaviour>();
                 foreach (var script in scripts)
@@ -23,7 +26,7 @@ public class ShowMenuOnEscapeScript : MonoBehaviour
                     script.enabled = false;
                 }
                 // disable hide cursor script on ScriptHolder
-                var hideCursorScript = ScriptHolder.GetComponent<HideCursorScript>();
+                var hideCursorScript = scriptHolder.GetComponent<HideCursorScript>();
                 hideCursorScript.enabled = false;
                 // enable panel
                 panel.SetActive(true);
@@ -32,6 +35,7 @@ public class ShowMenuOnEscapeScript : MonoBehaviour
             {
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
+                crosshair.SetActive(true);
                 // enable all scripts on player
                 var scripts = player.GetComponents<MonoBehaviour>();
                 foreach (var script in scripts)
@@ -39,7 +43,7 @@ public class ShowMenuOnEscapeScript : MonoBehaviour
                     script.enabled = true;
                 }
                 // enable hide cursor script on ScriptHolder
-                var hideCursorScript = ScriptHolder.GetComponent<HideCursorScript>();
+                var hideCursorScript = scriptHolder.GetComponent<HideCursorScript>();
                 hideCursorScript.enabled = true;
                 // disable panel
                 panel.SetActive(false);

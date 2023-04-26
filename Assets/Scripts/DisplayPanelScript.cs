@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DisplayPanel : MonoBehaviour
+public class DisplayPanelScript : MonoBehaviour
 {
     public Button exitPanelBtn;
     public Button accessBtn;

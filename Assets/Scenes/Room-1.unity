@@ -5188,6 +5188,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f3fd0f7eb5d38d449e01ccd08b2a711, type: 3}
+--- !u!1 &135359977 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4544725133012234187, guid: 2d604915f3324fd468162809f953eb45, type: 3}
+  m_PrefabInstance: {fileID: 1511213158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &137007018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16328,6 +16333,74 @@ CapsuleCollider:
   m_Height: 0.45
   m_Direction: 0
   m_Center: {x: -0.22, y: -0.02, z: 0}
+--- !u!1 &414973670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 414973674}
+  - component: {fileID: 414973673}
+  - component: {fileID: 414973672}
+  - component: {fileID: 414973671}
+  m_Layer: 0
+  m_Name: Tp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &414973671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414973670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6000a1227c5a8ff47b4947e992bac1a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Menu
+--- !u!65 &414973672
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414973670}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &414973673
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414973670}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &414973674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414973670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -37.984, y: 0.583, z: 46.65}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 697
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &414991453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60364,7 +60437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6346761687006070326, guid: 434cb03fe54ebff44bffaa6a7826b94f, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 434cb03fe54ebff44bffaa6a7826b94f, type: 3}
@@ -60412,11 +60485,6 @@ MonoBehaviour:
   rightDoorYRotationEnd: 0
   rightDoorZRotationEnd: 0
   isActivated: 0
---- !u!65 &1535911942 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 8027070121258293919, guid: 434cb03fe54ebff44bffaa6a7826b94f, type: 3}
-  m_PrefabInstance: {fileID: 1535911939}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1536387934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62129,7 +62197,6 @@ GameObject:
   - component: {fileID: 1584352985}
   - component: {fileID: 1584352986}
   - component: {fileID: 1584352987}
-  - component: {fileID: 1584352988}
   - component: {fileID: 1584352989}
   m_Layer: 0
   m_Name: Scripts
@@ -62206,25 +62273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a0fe570eafe4d443b2118e11c8aab54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1584352988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584352982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88abb78edc40e8f4d90398ea81ad6720, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RenderTexture: {fileID: 8400000, guid: 749e6a3ee90d4e244a483c0edcf16375, type: 2}
-  RedRenderTexture: {fileID: 8400000, guid: f38a397592c2f4547b1830335d904be0, type: 2}
-  BlueRenderTexture: {fileID: 8400000, guid: 4634fa60f865c764587558461bf12569, type: 2}
-  GreenRenderTexture: {fileID: 8400000, guid: 528e77903333c9b48807ba45682d5a8d, type: 2}
-  YellowRenderTexture: {fileID: 8400000, guid: 8df907b4afc1d2640b4e8255488309ad, type: 2}
-  BlackRenderTexture: {fileID: 8400000, guid: 39d4bd47fabf15f40899702e522fd23f, type: 2}
-  Button: {fileID: 1664987395}
 --- !u!114 &1584352989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62237,7 +62285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9632b98e070226f4e914be46d63763b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Button: {fileID: 1535911942}
+  eyes: {fileID: 135359977}
 --- !u!1001 &1585434297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64467,11 +64515,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f3fd0f7eb5d38d449e01ccd08b2a711, type: 3}
---- !u!65 &1664987395 stripped
-BoxCollider:
-  m_CorrespondingSourceObject: {fileID: 8027070121258293919, guid: 434cb03fe54ebff44bffaa6a7826b94f, type: 3}
-  m_PrefabInstance: {fileID: 1977548434}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1665048715 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1818984857632241205, guid: 6f3fd0f7eb5d38d449e01ccd08b2a711, type: 3}
@@ -72400,6 +72443,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2486643702069660348, guid: 42024193629289744a36c90969459e6e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 42024193629289744a36c90969459e6e, type: 3}
+--- !u!1 &1866597235 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5905657345129412845, guid: 42024193629289744a36c90969459e6e, type: 3}
+  m_PrefabInstance: {fileID: 1866597234}
+  m_PrefabAsset: {fileID: 0}
 --- !u!136 &1872800775
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -76263,10 +76311,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6346761687006070326, guid: 434cb03fe54ebff44bffaa6a7826b94f, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 434cb03fe54ebff44bffaa6a7826b94f, type: 3}
+--- !u!1 &1977548435 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6346761687006070326, guid: 434cb03fe54ebff44bffaa6a7826b94f, type: 3}
+  m_PrefabInstance: {fileID: 1977548434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1977548436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977548435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88abb78edc40e8f4d90398ea81ad6720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RenderTexture: {fileID: 8400000, guid: 749e6a3ee90d4e244a483c0edcf16375, type: 2}
+  RedRenderTexture: {fileID: 8400000, guid: f38a397592c2f4547b1830335d904be0, type: 2}
+  BlueRenderTexture: {fileID: 8400000, guid: 4634fa60f865c764587558461bf12569, type: 2}
+  GreenRenderTexture: {fileID: 8400000, guid: 528e77903333c9b48807ba45682d5a8d, type: 2}
+  YellowRenderTexture: {fileID: 8400000, guid: 8df907b4afc1d2640b4e8255488309ad, type: 2}
+  BlackRenderTexture: {fileID: 8400000, guid: 39d4bd47fabf15f40899702e522fd23f, type: 2}
+  screen: {fileID: 1866597235}
 --- !u!54 &1978328908
 Rigidbody:
   m_ObjectHideFlags: 0

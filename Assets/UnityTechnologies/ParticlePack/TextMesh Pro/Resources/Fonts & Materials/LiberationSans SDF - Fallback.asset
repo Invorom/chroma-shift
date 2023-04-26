@@ -206,6 +206,17 @@ MonoBehaviour:
       m_Y: 10
       m_Width: 64
       m_Height: 9
+    m_Metrics:
+      m_Width: 64
+      m_Height: 9
+      m_HorizontalBearingX: 11
+      m_HorizontalBearingY: 9
+      m_HorizontalAdvance: 86
+    m_GlyphRect:
+      m_X: 10
+      m_Y: 10
+      m_Width: 64
+      m_Height: 9
     m_Scale: 1
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
@@ -497,7 +508,7 @@ MonoBehaviour:
     m_Width: 42
     m_Height: 75
   m_FreeGlyphRects:
-  - m_X: 42
+  - m_X: 0
     m_Y: 28
     m_Width: 41
     m_Height: 65

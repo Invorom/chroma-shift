@@ -17,7 +17,7 @@ public class GameOverOnPlayerCollisionScript : MonoBehaviour
 
     private void GameOver(GameObject other)
     {
-        if (!other.CompareTag("Player"))
+        if (!other.CompareTag("PlayerBody") && !other.CompareTag("Player"))
         {
             return;
         }

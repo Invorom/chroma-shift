@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class QuitByBtn : MonoBehaviour
+public class QuitByBtnScript : MonoBehaviour
 {
     // Get quit button
     public Button quitBtn;

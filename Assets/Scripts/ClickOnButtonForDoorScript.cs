@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ClickOnButton : MonoBehaviour
+public class ClickOnButtonForDoorScript : MonoBehaviour
 {
     
     public GameObject eyes;
@@ -11,7 +11,6 @@ public class ClickOnButton : MonoBehaviour
     void Update()
     {
         var eyesCamera = eyes.GetComponent<Camera>();
-        // get mouse click
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
@@ -24,7 +23,7 @@ public class ClickOnButton : MonoBehaviour
                 if (hit.collider.gameObject.tag == "Button")
                 {
                     // switch value isAtivated on the script OpenDoor
-                    var openDoorScript = hit.collider.gameObject.GetComponent<OpenDoor>();
+                    var openDoorScript = hit.collider.gameObject.GetComponent<OpenDoorScript>();
                     if(openDoorScript.isActivated == false)
                     {
                         openDoorScript.isActivated = true;

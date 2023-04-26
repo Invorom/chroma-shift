@@ -10,20 +10,36 @@ public class MachokeScript : MonoBehaviour
         var playerBody = GameObject.FindWithTag("PlayerBody");
         var playerRenderer = playerBody.GetComponent<Renderer>();
 	    var movingCubes = GameObject.FindGameObjectsWithTag("MovingCube");
-		var InputField = GameObject.FindWithTag("InputField");
-		var canvas = InputField.GetComponent<Canvas>();
-        
-        if (playerRenderer.material.color != Color.red && canvas.enabled == false)
-        {
-            player.gameObject.GetComponent<PhysicalCharacterControllerScript>().walkForce = 8000f;
+		if (GameObject.FindWithTag("InputField")) {
+			var InputField = GameObject.FindWithTag("InputField");
+			var canvas = InputField.GetComponent<Canvas>();
 
-			// Change the mass of the moving cubes
-			foreach (var movingCube in movingCubes)
-			{
-				movingCube.GetComponent<Rigidbody>().mass = 50f;
-			}
-        }
-    } 
+			if (playerRenderer.material.color != Color.red && canvas.enabled == false)
+        	{
+            	player.gameObject.GetComponent<PhysicalCharacterControllerScript>().walkForce = 8000f;
+
+				// Change the mass of the moving cubes
+				foreach (var movingCube in movingCubes)
+				{
+					movingCube.GetComponent<Rigidbody>().mass = 50f;
+				}
+        	}
+    	}
+		else
+		{
+			if (playerRenderer.material.color != Color.red)
+        	{
+            	player.gameObject.GetComponent<PhysicalCharacterControllerScript>().walkForce = 8000f;
+
+				// Change the mass of the moving cubes
+				foreach (var movingCube in movingCubes)
+				{
+					movingCube.GetComponent<Rigidbody>().mass = 50f;
+				}
+        	}
+		}
+	}
+        
     
     private void OnCollisionStay(Collision other)
     {

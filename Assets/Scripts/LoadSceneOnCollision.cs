@@ -13,7 +13,8 @@ public class LoadSceneOnCollision : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Load scene");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
         }
     }

@@ -12,9 +12,8 @@ public class PrisonerMenuScript : MonoBehaviour
     void Update()
     {
         var navMeshAgent = humanoid.GetComponent<NavMeshAgent>();
-        var relativePosition = humanoid.transform.position - guard.transform.position;
-        var destination = guard.transform.position - relativePosition;
-        navMeshAgent.SetDestination(destination);
-        
+        navMeshAgent.avoidancePriority = 99;
+        // humanoid go to opposite direction of guard
+        navMeshAgent.SetDestination(humanoid.transform.position + (humanoid.transform.position - guard.transform.position));
     }
 }

@@ -5068,6 +5068,10 @@ PrefabInstance:
       propertyPath: playerBody
       value: 
       objectReference: {fileID: 1585695309}
+    - target: {fileID: 8191234324532705138, guid: 2d604915f3324fd468162809f953eb45, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d604915f3324fd468162809f953eb45, type: 3}
 --- !u!1 &390239840
@@ -17358,7 +17362,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 7baed613f575c5e4ba1b2704a26d3ebb, type: 2}
   m_audioClip: {fileID: 8300000, guid: 767072ec8a1e2fe4197817fcfe1e4aee, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0

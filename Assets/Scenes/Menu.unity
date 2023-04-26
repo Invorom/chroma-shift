@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c138a9cf648134c9d2232662010ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Room-1
+  sceneName: Room-2
   button: {fileID: 221440764}
 --- !u!114 &151626645
 MonoBehaviour:
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c138a9cf648134c9d2232662010ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Room-2
+  sceneName: Room-1
   button: {fileID: 623542516}
 --- !u!1 &221440762
 GameObject:
@@ -3037,7 +3037,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4149039977745969510, guid: 371bacaea0494194aaf5b95385b75fdc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 371bacaea0494194aaf5b95385b75fdc, type: 3}
 --- !u!1 &2050651515
 GameObject:

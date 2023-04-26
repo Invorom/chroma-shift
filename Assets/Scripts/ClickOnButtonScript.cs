@@ -13,7 +13,6 @@ public class ClickOnButtonScript : MonoBehaviour
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            Debug.Log("Mouse Click");
             RaycastHit hit;
             Ray ray = eyesCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
             
@@ -23,7 +22,6 @@ public class ClickOnButtonScript : MonoBehaviour
                 {
                     var script = hit.collider.gameObject.GetComponent<MonoBehaviour>();
 
-                    Debug.Log(script.GetType().Name);
                     if (script.GetType().Name == "OpenDoorScript")
                     {
                         var openDoorScript = script as OpenDoorScript;

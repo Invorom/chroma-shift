@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BunearyScript : MonoBehaviour
 {
+    public GameObject player;
+    public GameObject playerBody;
     void Update()
     {
-        var player = GameObject.FindWithTag("Player"); // Find the player
-        var playerBody = GameObject.FindWithTag("PlayerBody"); // Find the player's body
         var playerRenderer = playerBody.GetComponent<Renderer>(); // Get the player's body's renderer
         var playerScript = player.GetComponent<PhysicalCharacterControllerScript>(); // Get the player's script
 

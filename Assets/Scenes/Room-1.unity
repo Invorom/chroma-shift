@@ -59524,12 +59524,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8191234324146837848, guid: 2d604915f3324fd468162809f953eb45, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1511213160}
+    - target: {fileID: 8191234324146837848, guid: 2d604915f3324fd468162809f953eb45, type: 3}
+      propertyPath: playerBody
+      value: 
+      objectReference: {fileID: 1511213159}
+    - target: {fileID: 8191234324146837849, guid: 2d604915f3324fd468162809f953eb45, type: 3}
+      propertyPath: playerBody
+      value: 
+      objectReference: {fileID: 1511213159}
+    - target: {fileID: 8191234324146837854, guid: 2d604915f3324fd468162809f953eb45, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1511213160}
+    - target: {fileID: 8191234324146837854, guid: 2d604915f3324fd468162809f953eb45, type: 3}
+      propertyPath: playerBody
+      value: 
+      objectReference: {fileID: 1511213159}
     - target: {fileID: 8191234324527438568, guid: 2d604915f3324fd468162809f953eb45, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d604915f3324fd468162809f953eb45, type: 3}
+--- !u!1 &1511213159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8191234324534700328, guid: 2d604915f3324fd468162809f953eb45, type: 3}
+  m_PrefabInstance: {fileID: 1511213158}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1511213160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6780394510530368681, guid: 2d604915f3324fd468162809f953eb45, type: 3}
+  m_PrefabInstance: {fileID: 1511213158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1512072010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62198,6 +62228,7 @@ GameObject:
   - component: {fileID: 1584352986}
   - component: {fileID: 1584352987}
   - component: {fileID: 1584352989}
+  - component: {fileID: 1584352990}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Scripts
@@ -62286,6 +62317,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eyes: {fileID: 135359977}
+--- !u!114 &1584352990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584352982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3859750d437c556438d84d4a305c6a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1585434297
 PrefabInstance:
   m_ObjectHideFlags: 0

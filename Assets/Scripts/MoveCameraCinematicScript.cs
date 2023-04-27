@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementCameraScript : MonoBehaviour
+public class MoveCameraCinematicScript : MonoBehaviour
 {
-    public GameObject camera;
+    public new GameObject camera;
     void Start()
     {
-        
         StartCoroutine(MoveCamera());
     }
     

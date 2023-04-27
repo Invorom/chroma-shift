@@ -1,6 +1,28 @@
 Scripts:
 
-	Les scripts on été fait par nous deux, nous avons codé a l'autre personne 
+	-Buneary Romain
+	-ChangeCamera Romain Johan
+	-CheckDigicode Romain
+	-ChromaChange Johan Romain
+	-ClickOnButton Johan
+	-DetectClick Romain
+	-DisplayPanel Johan
+	-Filter Romain Johan
+	-GameOverOnCollision Johan
+	-GuardMenu Johan
+	-HumanoidNavMesh Romain
+	-LoadSceneOnButtonClick Johan
+	-Machoke Romain
+	-ManageSound Romain
+	-Metamorph Romain Johan
+	-OpenDoor Johan Romain
+	-PrisonerMenu Johan
+	-QuitByBtn Johan
+	-ShowMenuOnEscape Johan
+	-TriggerTrap Johan
+	-Unown Romain Johan
+
+	Les autres code vienne du cours
 
 Scenes:
 	-Room-1 Romain
@@ -8,7 +30,7 @@ Scenes:
 	-Menu Johan Romain
 	-Tuto Johan Romain
 
-Préfabs:
+Prefabs:
 	-Bed Johan
 	-Camera Johan
 	-Tele Johan
@@ -30,8 +52,10 @@ Préfabs:
 	-Tunnel Romain
 	-Wall Romain
 
+	Les autres prefabs vienne de Unity ou du cours
+
 Materials:
 	Les matérials qui ont été fait on été fait par Romain
 
 Sound :
-	Les sons on été trouvé et fait par Johan
+	Les sons on été trouvé et/ou fait par Johan

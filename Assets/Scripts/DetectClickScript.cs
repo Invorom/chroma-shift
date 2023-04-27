@@ -11,6 +11,8 @@ public class DetectClickScript : MonoBehaviour
     [SerializeField]
     public TMP_InputField inputField;
     public Collider Digicode;
+    public float mouseSensitiveX = 50f;
+    public float mouseSensitiveY = 10f;
 
     // Make raycast when the player press the left mouse button
     void Update()
@@ -68,8 +70,8 @@ public class DetectClickScript : MonoBehaviour
             player.gameObject.GetComponent<PhysicalCharacterControllerScript>().walkForce = 8000f;
             
             // Set the mouse sensitivity to the default value
-            player.gameObject.GetComponent<PhysicalCharacterControllerScript>().mouseXSensitivity = 250f;
-            player.gameObject.GetComponent<PhysicalCharacterControllerScript>().mouseYSensitivity = 150f;
+            player.gameObject.GetComponent<PhysicalCharacterControllerScript>().mouseXSensitivity = mouseSensitiveX;
+            player.gameObject.GetComponent<PhysicalCharacterControllerScript>().mouseYSensitivity = mouseSensitiveY;
         }
     }
 }

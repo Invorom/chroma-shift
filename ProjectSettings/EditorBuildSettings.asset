@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tuto.unity
     guid: 7fe80ce1a4ca6184eba1a9e142474ef7
+  - enabled: 1
+    path: Assets/Scenes/Cinematic.unity
+    guid: 42dbeafc0ec953e4bbe60fe4b3c8a04d
   m_configObjects: {}

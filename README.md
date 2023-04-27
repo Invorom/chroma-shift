@@ -24,7 +24,7 @@ Scripts:
 	-TriggerTrap Johan
 	-Unown Romain Johan
 
-	Les autres code vienne du cours
+	Les autres codes viennent du cours
 
 Scenes:
 	-Room-1 Romain
@@ -55,10 +55,10 @@ Prefabs:
 	-Tunnel Romain
 	-Wall Romain
 
-	Les autres prefabs vienne de Unity ou du cours
+	Les autres prefabs viennent de Unity ou du cours
 
 Materials:
-	Les matérials qui ont été fait on été fait par Romain
+	Les materials ont ete fait par Romain
 
 Sound :
-	Les sons on été trouvé et/ou fait par Johan
+	Les sons ont ete trouves et/ou fait par Johan

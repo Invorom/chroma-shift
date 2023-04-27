@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -288,7 +288,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -1406,7 +1406,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2437421292604658321}
-  - component: {fileID: 2437421292604658322}
   m_Layer: 0
   m_Name: Adam
   m_TagString: Player
@@ -1510,14 +1509,6 @@ Transform:
   m_Father: {fileID: 1696270936654829172}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -359.133, z: 0}
---- !u!81 &2437421292604658322
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1866224298027170493}
-  m_Enabled: 1
 --- !u!1001 &2523644881914231197
 PrefabInstance:
   m_ObjectHideFlags: 0
